@@ -1,0 +1,191 @@
+@keyframes animarInimigo {
+    from {
+        right: -100px;
+    }
+    to {
+        right: 105%;
+    }
+}
+
+@keyframes personagemMorto {
+    0%{
+        bottom: 100px;
+    }
+    50%{
+        bottom:200px;
+    }
+    100% {
+        bottom: -60px;
+    }
+}
+
+@keyframes puloPersonagem {
+    0% {
+        bottom: 100px;
+    }
+    50% {
+        bottom: 320px;
+    }
+    60% {
+        bottom: 320px;
+    }
+    70% {
+        bottom: 320px;
+    }
+    80% {
+        bottom: 320px;
+    }
+    90% {
+        bottom: 320px;
+    }
+    100% {
+        bottom: 100px;
+    }
+    
+}
+
+#cenario {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background-image: url(/image/cenario.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: right; /*se mudar muda o cenario*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+#ceu {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-image: url(/image/cenarioCeu.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 0 0;
+}
+
+#personagem {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background-image: url(/image/marioParadoLadoDireito.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: 0 0;
+    bottom: 100px;
+    left: 0;
+}
+
+.personagem-morto {
+    animation: personagemMorto 1300ms ease-out;
+}
+
+.puloPersonagem {
+    animation: puloPersonagem 500ms ease-out;
+}
+
+#inimigo {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-image: url(/image/inimigoLadoEsquerdo.gif);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: 0 0;
+    bottom: 100px;
+    right: -100px;
+}
+
+.animarInimigo {
+    animation: animarInimigo 20s infinite linear;
+}
+
+#menu-do-jogo {
+    position: absolute;
+    width: 1000px;
+    height: 150px;
+    background-image: url(/image/menuDoJogo.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: 0 0;
+    top: 20px;
+}
+
+#bloco {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background-image: url(/image/bloco.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: 0 0;
+    right: 550px;
+    top: 485px;
+}
+
+#tempo {
+    position: absolute;
+    top: 74px;
+    right: 315px;
+    color: #ffdf73;
+}
+
+#vidas {
+    position: absolute;
+    top: 83px;
+    left: 125px;
+    color: #fff;
+}
+
+#moedas {
+    position: absolute;
+    top: 50px;
+    right: 70px;
+    color: #fff;
+}
+
+#pontos {
+    position: absolute;
+    top: 80px;
+    right: 70px;
+    color: #fff;
+}
+
+#reiniciar {
+    position: absolute;
+    padding: 10px 20px;
+    font-size: 15px;
+    cursor: pointer;
+    display: none;
+    z-index: 1;
+    bottom: 200px;
+}
+
+#iniciar {
+    padding: 10px 20px;
+    font-size: 15px;
+    cursor: pointer;
+    display: block;
+}
+
+.game-over .game {
+    position: absolute;
+    width: 50vw;
+    left: 0;
+    top: 0;
+}
+
+.game-over .over {
+    position: absolute;
+    width: 50vw;
+    right: 0;
+    top: 0;
+}
+
+.desabilitado {
+    display: none; 
+}
