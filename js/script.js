@@ -50,10 +50,10 @@ let colidiu = false;
 function teclaPressionada(event) {
     if (event.key === "ArrowRight") {
         direcao = 1;
-        personagem.style.backgroundImage = "url(/image/marioAndandoLadoDireito.gif)";
+        personagem.style.backgroundImage = "url(../image/marioAndandoLadoDireito.gif)";
     } else if (event.key === "ArrowLeft") {
         direcao = -1;
-        personagem.style.backgroundImage = "url(/image/marioAndandoLadoEsquerdo.gif)";
+        personagem.style.backgroundImage = "url(../image/marioAndandoLadoEsquerdo.gif)";
     } else if (event.key === " ") {
         personagem.classList.add("puloPersonagem");
         audioPulo.play();
@@ -71,10 +71,10 @@ function teclaPressionada(event) {
 function teclaSolta(event) {
     if (event.key === "ArrowRight") {
         direcao = 0;
-        personagem.style.backgroundImage = "url(/image/marioParadoLadoDireito.png)";
+        personagem.style.backgroundImage = "url(../image/marioParadoLadoDireito.png)";
     } else if (event.key === "ArrowLeft") {
         direcao = 0;
-        personagem.style.backgroundImage = "url(/image/marioParadoLadoEsquerdo.png)";
+        personagem.style.backgroundImage = "url(../image/marioParadoLadoEsquerdo.png)";
     }
 }
 
@@ -105,7 +105,7 @@ function colisaoComInimigo() {
         vidasAtual--;
         vidas.textContent = vidasAtual;
         localStorage.setItem("vidasAtual", vidasAtual);
-        personagem.style.backgroundImage = "url(/image/marioMorto.gif)";
+        personagem.style.backgroundImage = "url(../image/marioMorto.gif)";
         setTimeout(() => {
             personagem.classList.add("personagem-morto");
         }, 700)
@@ -188,7 +188,7 @@ function relogio() {
     } else if (tempoAtual === 0) {
         removerTeclas()
         clearInterval(checarRelogio);
-        personagem.style.backgroundImage = "url(/image/marioMorto.gif)";
+        personagem.style.backgroundImage = "url(../image/marioMorto.gif)";
         setTimeout(() => {
             personagem.classList.add("personagem-morto");
         }, 700)
