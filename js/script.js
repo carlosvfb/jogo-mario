@@ -177,7 +177,7 @@ function checarMoedas() {
 function relogio() {
     tempoAtual--;
     tempo.textContent = tempoAtual;
-    if (tempoAtual === 100) {
+    if (tempoAtual === 380) {
         audioJogoNormal.volume = 0;
         audioTempoAcabando.play();
         setTimeout(() => {
